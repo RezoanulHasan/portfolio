@@ -1,0 +1,60 @@
+.image-container {
+  width: 100%;
+  height: 400px; /* Adjust the height to fit your needs */
+  overflow: hidden;
+  position: relative;
+}
+
+.image-container.scroll {
+  overflow: hidden;
+}
+
+.image-container.scroll img {
+  animation: scrollImage 10s linear infinite;
+}
+
+@keyframes scrollImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.attractive-button {
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 25px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  position: end;
+}
+
+.attractive-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.attractive-button:active {
+  transform: translateY(0);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
